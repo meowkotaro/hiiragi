@@ -6,6 +6,7 @@ $cArea: #E6E6E6;
 $cH2Background: rgba(0, 51, 102, 0.1);
 $cBg: #E6E6E6;
 $cTextArea: rgba(255, 255, 255, 0.7);
+$cHover: rgba(255,255,255,0.3);
 
 
 html{
@@ -64,7 +65,7 @@ ul {
 .p-font {
     font-size: 1.2rem;
 
-    @include mq() {
+    @include mq(lg) {
         font-size: 1.4rem;
     }
 }
@@ -109,4 +110,10 @@ h2 {
 .row {
     margin-left: 0;
     margin-right: 0;
+}
+
+.hover {
+    :hover {
+        background-color: $cHover;
+    }
 }
