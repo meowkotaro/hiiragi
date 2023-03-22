@@ -222,11 +222,17 @@
     //search area
     .search {
         width: 95%;
+        max-width: 960px;
         
         @include areaHeader();
 
         &-content {
             justify-content: space-between;
+
+            @include mq() {
+                width: 80%;
+                margin: 0 auto;
+            }
         }
 
         &-text {
@@ -238,16 +244,22 @@
             @extend .item-mt;
 
             &_item {
-                height: 80px;
+                height: 60px;
+                margin-bottom: 10px;
+
+                @include mq() {
+                    height: 75px;
+                }
                 
                 .bg {
                     display: block;
                     text-decoration: none;
                     color: white;
-                    width: 100%;
-                    max-width: 180px;
-                    height: 60px;
-                    margin: 10px auto;
+                    width: 90%;
+                    min-width: 160px;
+                    max-width: 200px;
+                    height: 100%;
+                    margin: 0px auto;
                     border-radius: 10px;
                     background-color: $cMain;
                     
@@ -255,6 +267,11 @@
                         text-align: center;
                         line-height: 60px;
                         font-size: 3.6rem;
+
+                        @include mq() {
+                            line-height: 75px;
+                            font-size: 4.2rem;
+                        }
                     }
                 }
             }
@@ -264,7 +281,7 @@
             @extend .item-mt;
 
             &_item {
-                height: 50px;
+                height: 100%;
                 
                 .bg {
                     display: block;
@@ -276,11 +293,19 @@
                     margin: 10px auto;
                     border-radius: 10px;
                     background-color: $cBtn;
+                    @include mq() {
+                        height: 45px;
+                    }
                     
                     p{
                         text-align: center;
                         line-height: 30px;
                         font-size: 1.2rem;
+                        @include mq() {
+                            line-height: 45px;
+                            font-weight: 600;
+                            font-size: 1.4rem;
+                        }
                     }
                 }
             }
@@ -290,7 +315,7 @@
             @extend .item-mt;
 
             &_item {
-                height: 50px;
+                height: 100%;
                 
                 .bg {
                     display: block;
@@ -302,11 +327,19 @@
                     margin: 10px auto;
                     border-radius: 10px;
                     background-color: $cBtn;
+                    @include mq() {
+                        height: 45px;
+                    }
                     
                     p{
                         text-align: center;
                         line-height: 30px;
                         font-size: 1.2rem;
+                        @include mq() {
+                            line-height: 45px;
+                            font-weight: 600;
+                            font-size: 1.4rem;
+                        }
                     }
                 }
             }
@@ -333,6 +366,10 @@
                         text-align: center;
                         line-height: 20px;
                         font-size: 1rem;
+                        @include mq() {
+                            font-weight: 600;
+                            font-size: 1.4rem;
+                        }
                     }
                 }
             }
@@ -375,6 +412,14 @@
             height: 210px;
             left: 5%;
             @extend .item-mt;
+
+            @include mq() {
+                margin-top: 75px;
+            }
+
+            @include mq(xl) {
+                max-width: 240px;
+            }
         }
         &-img {
             position: absolute;
@@ -383,7 +428,13 @@
             right: 0;
             top: 0;
             z-index: 0;
+
+            @include mq(lg) {
+                width: 200px;
+                height: 150px;
+            }
         }
+
         &-size {
             position: absolute;
             height: 20px;
@@ -412,6 +463,11 @@
             bottom: 0;
             left: 0;
             z-index: 1;
+
+            @include mq(lg) {
+                width: 200px;
+                height: 105px;
+            }
 
             @include flex(
                 $fd:column,

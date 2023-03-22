@@ -13,13 +13,17 @@ ul {
 }
 
 .bg-font {
-  font-size: 4.8rem;
+  display: inline-block;
+  font-size: 6.4rem;
   color: rgba(0, 51, 102, 0.1);
   font-weight: 900;
+  font-family: "Rubik", sans-serif;
+  line-height: 6.4rem;
 }
 @media screen and (min-width: 768px) {
   .bg-font {
-    font-size: 6.4rem;
+    font-size: 10rem;
+    line-height: 10rem;
   }
 }
 
@@ -281,6 +285,7 @@ body #global-container.navOpen {
 }
 .main .search {
   width: 95%;
+  max-width: 960px;
 }
 .main .search-header {
   position: relative;
@@ -288,18 +293,24 @@ body #global-container.navOpen {
   height: 60px;
 }
 .main .search-header_bg {
-  width: 300px;
+  width: 500px;
   position: absolute;
-  align-items: center;
   top: 0;
-  left: 5%;
 }
 .main .search-header_bg img {
-  width: 50px;
-  height: 50px;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 6.4rem;
+  height: 6.4rem;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .main .search-header_bg img {
+    width: 100px;
+    height: 100px;
+  }
 }
 .main .search-header_text {
   position: absolute;
@@ -313,20 +324,33 @@ body #global-container.navOpen {
 .main .search-content {
   justify-content: space-between;
 }
+@media screen and (min-width: 768px) {
+  .main .search-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 .main .search-text {
   font-weight: 600;
 }
 .main .search-area_item {
-  height: 80px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .main .search-area_item {
+    height: 75px;
+  }
 }
 .main .search-area_item .bg {
   display: block;
   text-decoration: none;
   color: white;
-  width: 100%;
-  max-width: 180px;
-  height: 60px;
-  margin: 10px auto;
+  width: 90%;
+  min-width: 160px;
+  max-width: 200px;
+  height: 100%;
+  margin: 0px auto;
   border-radius: 10px;
   background-color: #003366;
 }
@@ -335,8 +359,14 @@ body #global-container.navOpen {
   line-height: 60px;
   font-size: 3.6rem;
 }
+@media screen and (min-width: 768px) {
+  .main .search-area_item .bg p {
+    line-height: 75px;
+    font-size: 4.2rem;
+  }
+}
 .main .search-rent_item {
-  height: 50px;
+  height: 100%;
 }
 .main .search-rent_item .bg {
   display: block;
@@ -349,13 +379,25 @@ body #global-container.navOpen {
   border-radius: 10px;
   background-color: #A3B8CC;
 }
+@media screen and (min-width: 768px) {
+  .main .search-rent_item .bg {
+    height: 45px;
+  }
+}
 .main .search-rent_item .bg p {
   text-align: center;
   line-height: 30px;
   font-size: 1.2rem;
 }
+@media screen and (min-width: 768px) {
+  .main .search-rent_item .bg p {
+    line-height: 45px;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+}
 .main .search-room_item {
-  height: 50px;
+  height: 100%;
 }
 .main .search-room_item .bg {
   display: block;
@@ -368,10 +410,22 @@ body #global-container.navOpen {
   border-radius: 10px;
   background-color: #A3B8CC;
 }
+@media screen and (min-width: 768px) {
+  .main .search-room_item .bg {
+    height: 45px;
+  }
+}
 .main .search-room_item .bg p {
   text-align: center;
   line-height: 30px;
   font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .main .search-room_item .bg p {
+    line-height: 45px;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
 }
 .main .search-terms_item {
   height: 90px;
@@ -391,6 +445,12 @@ body #global-container.navOpen {
   text-align: center;
   line-height: 20px;
   font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .main .search-terms_item .bg p {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
 }
 .main .search-terms_img {
   margin-top: 5px;
@@ -421,18 +481,24 @@ body #global-container.navOpen {
   height: 60px;
 }
 .main .houses-header_bg {
-  width: 300px;
+  width: 500px;
   position: absolute;
-  align-items: center;
   top: 0;
-  left: 5%;
 }
 .main .houses-header_bg img {
-  width: 50px;
-  height: 50px;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 6.4rem;
+  height: 6.4rem;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .main .houses-header_bg img {
+    width: 100px;
+    height: 100px;
+  }
 }
 .main .houses-header_text {
   position: absolute;
@@ -449,6 +515,16 @@ body #global-container.navOpen {
   height: 210px;
   left: 5%;
 }
+@media screen and (min-width: 768px) {
+  .main .houses-area {
+    margin-top: 75px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main .houses-area {
+    max-width: 240px;
+  }
+}
 .main .houses-img {
   position: absolute;
   width: 150px;
@@ -456,6 +532,12 @@ body #global-container.navOpen {
   right: 0;
   top: 0;
   z-index: 0;
+}
+@media screen and (min-width: 960px) {
+  .main .houses-img {
+    width: 200px;
+    height: 150px;
+  }
 }
 .main .houses-size {
   position: absolute;
@@ -489,6 +571,12 @@ body #global-container.navOpen {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+@media screen and (min-width: 960px) {
+  .main .houses-textarea {
+    width: 200px;
+    height: 105px;
+  }
 }
 .main .houses-textarea li {
   list-style-type: none;
@@ -533,18 +621,24 @@ body #global-container.navOpen {
   height: 60px;
 }
 .main .buy-header_bg {
-  width: 300px;
+  width: 500px;
   position: absolute;
-  align-items: center;
   top: 0;
-  left: 5%;
 }
 .main .buy-header_bg img {
-  width: 50px;
-  height: 50px;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 6.4rem;
+  height: 6.4rem;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .main .buy-header_bg img {
+    width: 100px;
+    height: 100px;
+  }
 }
 .main .buy-header_text {
   position: absolute;
