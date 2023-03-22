@@ -262,6 +262,7 @@
                     margin: 0px auto;
                     border-radius: 10px;
                     background-color: $cMain;
+                    @extend .hover;
                     
                     p{
                         text-align: center;
@@ -293,6 +294,7 @@
                     margin: 10px auto;
                     border-radius: 10px;
                     background-color: $cBtn;
+                    @extend .hover;
                     @include mq() {
                         height: 45px;
                     }
@@ -327,6 +329,7 @@
                     margin: 10px auto;
                     border-radius: 10px;
                     background-color: $cBtn;
+                    @extend .hover;
                     @include mq() {
                         height: 45px;
                     }
@@ -361,6 +364,7 @@
                     margin: 10px auto;
                     border-radius: 10px;
                     background-color: $cBg;
+                    @extend .hover;
                     
                     p{
                         text-align: center;
@@ -393,7 +397,7 @@
             position: absolute;
             background-color: $cBtn;
             border-radius: 50px 0 0 50px;
-            width: 105%;
+            width: 125%;
             height: 1200px;
         }
 
@@ -518,7 +522,7 @@
             position: absolute;
             background-color: white;
             border-radius:  0 50px 50px 0;
-            width: 105%;
+            width: 125%;
             height: 1000px;
         }
         

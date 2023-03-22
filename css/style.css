@@ -58,7 +58,7 @@ ul {
 .p-font, .main .houses-textarea_addres, .main .houses-textarea_near {
   font-size: 1.2rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   .p-font, .main .houses-textarea_addres, .main .houses-textarea_near {
     font-size: 1.4rem;
   }
@@ -103,6 +103,10 @@ ul {
 .row {
   margin-left: 0;
   margin-right: 0;
+}
+
+.hover :hover, .main .search-area_item .bg :hover, .main .search-rent_item .bg :hover, .main .search-room_item .bg :hover, .main .search-terms_item .bg :hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .hidden {
@@ -293,7 +297,6 @@ body #global-container.navOpen {
   height: 60px;
 }
 .main .search-header_bg {
-  width: 500px;
   position: absolute;
   top: 0;
 }
@@ -467,7 +470,7 @@ body #global-container.navOpen {
   position: absolute;
   background-color: #A3B8CC;
   border-radius: 50px 0 0 50px;
-  width: 105%;
+  width: 125%;
   height: 1200px;
 }
 .main .houses-container {
@@ -481,7 +484,6 @@ body #global-container.navOpen {
   height: 60px;
 }
 .main .houses-header_bg {
-  width: 500px;
   position: absolute;
   top: 0;
 }
@@ -612,7 +614,7 @@ body #global-container.navOpen {
   position: absolute;
   background-color: white;
   border-radius: 0 50px 50px 0;
-  width: 105%;
+  width: 125%;
   height: 1000px;
 }
 .main .buy-header {
@@ -621,7 +623,6 @@ body #global-container.navOpen {
   height: 60px;
 }
 .main .buy-header_bg {
-  width: 500px;
   position: absolute;
   top: 0;
 }
