@@ -117,3 +117,23 @@ h2 {
         background-color: $cHover;
     }
 }
+
+$xPosition: (
+  left: (
+    leftPercent: 5%,
+    rightPercent: auto,
+  ),
+  right: (
+    leftPercent: auto,
+    rightPercent: 5%,
+  ),
+  
+);
+
+@each $key, $value in $xPosition{
+    .xP-#{$key}{
+      left: map-get($value, leftPercent);
+      right: map-get($value, rightPercent);
+    }
+  }
+
