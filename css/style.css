@@ -11,6 +11,11 @@ p {
   margin-bottom: 0rem;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -50,11 +55,11 @@ ul {
   }
 }
 
-.sl-font, .main .search-text {
+.sl-font, .main .search-text, .main .buy-area_li {
   font-size: 1.4rem;
 }
 @media screen and (min-width: 768px) {
-  .sl-font, .main .search-text {
+  .sl-font, .main .search-text, .main .buy-area_li {
     font-size: 1.6rem;
   }
 }
@@ -79,6 +84,11 @@ ul {
 
 .item-mt, .main .search-area, .main .search-rent, .main .search-room, .main .search-terms, .main .houses-area, .main .buy-area {
   margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .item-mt, .main .search-area, .main .search-rent, .main .search-room, .main .search-terms, .main .houses-area, .main .buy-area {
+    margin-top: 50px;
+  }
 }
 
 .sm-mg {
@@ -182,6 +192,10 @@ body #global-container.navOpen {
 .nav-item {
   padding: 10px;
 }
+.nav-item h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 
 .header {
   position: relative;
@@ -278,7 +292,6 @@ body #global-container.navOpen {
 }
 .main .news {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   overflow: hidden;
   width: 360px;
@@ -310,10 +323,10 @@ body #global-container.navOpen {
   text-align: center;
 }
 .main .news .swiper-slide p:nth-child(1) {
-  width: 30%;
+  width: 25%;
 }
 .main .news .swiper-slide p:nth-child(2) {
-  width: 50%;
+  width: 55%;
 }
 .main .search {
   width: 95%;
@@ -499,7 +512,7 @@ body #global-container.navOpen {
   background-color: #A3B8CC;
   border-radius: 50px 0 0 50px;
   width: 125%;
-  height: 1200px;
+  height: 1000px;
 }
 .main .houses-container {
   position: relative;
@@ -679,6 +692,8 @@ body #global-container.navOpen {
   margin-bottom: 0;
 }
 .main .buy-container {
+  max-width: 960px;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
   justify-content: space-around;
@@ -687,5 +702,65 @@ body #global-container.navOpen {
   width: 320px;
   height: 320px;
   border-radius: 50px;
-  border: 1px solid black;
+  border: 2px solid black;
+  background-color: #E6E6E6;
+  color: #003366;
+}
+@media screen and (min-width: 768px) {
+  .main .buy-area {
+    width: 320px;
+    height: 350px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .main .buy-area {
+    width: 400px;
+    height: 350px;
+  }
+}
+.main .buy-area_ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 95%;
+  padding-top: 10px;
+  list-style: none;
+}
+.main .buy-area_li {
+  width: 200px;
+}
+.main .buy-area_li:first-child {
+  width: 250px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .main .buy-area_li {
+    width: 250px;
+  }
+}
+.main .buy-area_title {
+  padding-right: 5px;
+  border-right: 1px solid #003366;
+}
+.main .buy-area_price {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.main .buy-area_text:first-child {
+  font-weight: 600;
+}
+.main .buy-area_text:nth-child(2) {
+  padding-left: 10px;
+}
+.main .buy-area_img {
+  width: 200px;
+  height: 150px;
+}
+@media screen and (min-width: 768px) {
+  .main .buy-area_img {
+    width: 250px;
+    height: 200px;
+  }
 }/*# sourceMappingURL=style.css.map */

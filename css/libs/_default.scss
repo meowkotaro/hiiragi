@@ -22,6 +22,11 @@ p {
     margin-bottom: 0rem;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 ul {
     padding: 0;
     margin: 0;
@@ -84,6 +89,10 @@ ul {
 
 .item-mt {
     margin-top: 30px;
+
+    @include mq() {
+        margin-top: 50px;
+    }
 }
 
 .sm-mg {

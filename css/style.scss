@@ -55,6 +55,11 @@
 
     &-item {
         padding: 10px;
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
     }
 }
 
@@ -174,7 +179,6 @@
     // news area
     .news {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         overflow: hidden;
         width: 360px;
@@ -208,10 +212,10 @@
                     line-height: 40px;
                     text-align: center;
                     &:nth-child(1){
-                        width: 30%;
+                        width: 25%;
                     }
                     &:nth-child(2){
-                        width: 50%;
+                        width: 55%;
                     }
                 }
             }
@@ -398,7 +402,7 @@
             background-color: $cBtn;
             border-radius: 50px 0 0 50px;
             width: 125%;
-            height: 1200px;
+            height: 1000px;
         }
 
         &-container {
@@ -529,6 +533,8 @@
         @include areaHeader();
 
         &-container {
+            max-width: 960px;
+            margin: 0 auto;
             position: relative;
             z-index: 2;
             justify-content: space-around;
@@ -538,8 +544,71 @@
             width: 320px;
             height: 320px;
             border-radius: 50px;
-            border: 1px solid black;
+            border: 2px solid black;
+            background-color: $cBg;
+            color: $cMain;
             @extend .item-mt;
+
+            @include mq() {
+                width: 320px;
+                height: 350px;
+            }
+            @include mq(lg) {
+                width: 400px;
+                height: 350px;
+            }
+
+            &_ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 95%;
+                padding-top: 10px;
+                list-style: none;
+            }
+
+            &_li {
+                @extend .sl-font;
+                width: 200px;
+                &:first-child {
+                    width: 250px;
+                    text-align: center;
+                }
+
+                @include mq() {
+                    width: 250px;
+                }
+            }
+
+            &_title {
+                padding-right: 5px;
+                border-right: 1px solid $cMain;
+            }
+            &_price {
+                font-size: 2.4rem;
+                font-weight: 600;
+            }
+
+            &_text {
+                &:first-child {
+                    font-weight: 600;
+                }
+                &:nth-child(2) {
+                    padding-left: 10px;
+                }
+            }
+
+            &_img {
+                width: 200px;
+                height: 150px;
+
+                @include mq() {
+                    width: 250px;
+                    height: 200px;
+                }
+            }
         }
     }
 }
