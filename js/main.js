@@ -31,3 +31,51 @@ const swiper = new Swiper('.swiper', {
       delay:2500
     }
   });
+
+
+ //io 
+class MoveObserver {
+  constructor(els,cb,options){
+    this.els = document.querySelectorAll(els);
+    this.cb = cb;
+    let DefaultOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0
+    }
+    this.options = Object.assign(DefaultOptions, options);
+    this._init()
+  }
+
+  _init() {
+    const callBack = function(entries, observer) {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          console.log(this);
+          this.cb(entry.target, entry.isIntersecting)
+        } else {
+          this.cb(entry.target, entry.isIntersecting)
+        }
+      })
+    };
+
+    const io = new IntersectionObserver(callBack.bind(this), this.options);
+
+    this.els.forEach(el => io.observe(el));
+  }
+};
+
+const cb = (el, isIntersecting) => {
+  if(isIntersecting) {
+    el.classList.add('move');
+  } else {
+    el.classList.remove('move');
+  }
+}
+
+const mo = new MoveObserver('.io', cb);
+
+
+
+
+
