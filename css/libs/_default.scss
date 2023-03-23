@@ -13,6 +13,10 @@ html{
     font-size: 62.5%;
 }
 
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
 p {
     margin-top: 0;
     margin-bottom: 0rem;
@@ -113,8 +117,22 @@ h2 {
 }
 
 .hover {
-    :hover {
-        background-color: $cHover;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+            background-color: $cHover;
+        }
     }
 }
 
