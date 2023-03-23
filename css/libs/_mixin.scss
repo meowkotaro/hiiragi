@@ -38,10 +38,6 @@ $breakpoints:(
   align-items: $ai;
 }
 
-$xPosition: (
-  left: 5px,
-  right: 5px,
-);
 
 @mixin areaHeader(
 ) {

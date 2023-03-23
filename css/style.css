@@ -2,6 +2,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 0rem;
@@ -105,8 +109,32 @@ ul {
   margin-right: 0;
 }
 
-.hover :hover, .main .search-area_item .bg :hover, .main .search-rent_item .bg :hover, .main .search-room_item .bg :hover, .main .search-terms_item .bg :hover {
+.hover, .main .search-area_item .bg, .main .search-rent_item .bg, .main .search-room_item .bg, .main .search-terms_item .bg {
+  position: relative;
+}
+.hover::after, .main .search-area_item .bg::after, .main .search-rent_item .bg::after, .main .search-room_item .bg::after, .main .search-terms_item .bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.hover:hover::after, .main .search-area_item .bg:hover::after, .main .search-rent_item .bg:hover::after, .main .search-room_item .bg:hover::after, .main .search-terms_item .bg:hover::after {
+  opacity: 1;
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.xP-left {
+  left: 5%;
+  right: auto;
+}
+
+.xP-right {
+  left: auto;
+  right: 5%;
 }
 
 .hidden {
